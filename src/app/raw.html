@@ -1,0 +1,55 @@
+<div *ngIf="selectedStory">
+ 
+  <h2>{{ selectedStory.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{selectedStory.id}}</div>
+  <div>
+    <label>title:
+      <input [(ngModel)]="selectedStory.title" placeholder="title">
+    </label>
+  </div>
+ 
+</div>
+
+import { Story } from '../story';
+import { STORIES } from '../mock-stories';
+
+/*
+  onSelect(story: Story): void {
+    this.selectedStory = story;
+  }
+
+  thumpsUp(story: Story): void {
+    story.rate ++;
+  }
+
+  thumpsDown(story: Story): void {
+    story.rate --;
+  }
+ */
+
+   /*selectedStory: Story;*/
+
+   <ul class="content">
+  <li *ngFor="let story of stories"
+    [class.selected]="story === selectedStory"
+    (click)="onSelect(story)">
+    <span class="badge">{{story.id}}</span> {{story.title}}
+  </li> 
+</ul>
+ 
+<div *ngIf="selectedStory">
+ 
+  <h2>{{ selectedStory.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{selectedStory.id}}</div>
+  <div>
+    <label>title:
+      <input [(ngModel)]="selectedStory.title" placeholder="title">
+    </label>
+  </div>
+ 
+</div>
+
+import { FormsModule } from '@angular/forms'; 
+    FormsModule
+
+      /*stories = STORIES;*/

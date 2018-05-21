@@ -1,0 +1,13 @@
+<section class="content">
+  <article *ngFor="let story of stories"
+    [class.selected]="story === selectedStory"
+    (click)="onSelect(story)">
+    <span class="badge">{{story.id}}</span>
+    <h2>{{story.title}}</h2>
+    <div>
+      Rate: {{story.rate}}	
+      <button class="" (click)="thumpsUp(story)">Up</button>
+      <button class="" (click)="thumpsDown(story)">Down</button>
+    </div>
+  </article> 
+</section>
