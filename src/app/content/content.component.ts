@@ -20,6 +20,7 @@ export class ContentComponent implements OnInit {
 
   thumpsUp(story: Story): void {
     story.rate ++;
+    this.ordenar();
   }
 
   thumpsDown(story: Story): void {
@@ -29,7 +30,6 @@ export class ContentComponent implements OnInit {
 
   onSelect(story: Story): void {
     this.selectedStory = story;
-    this.ordenar();
   }
 
   ordenar() {
