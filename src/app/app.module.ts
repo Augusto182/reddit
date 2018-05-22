@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
+import { OrdenarPipe } from './ordenar.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContentComponent
+    ContentComponent,
+    OrdenarPipe
   ],
   imports: [
     BrowserModule
